@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Bullky.Models.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Upsert">Create New</a>
+</p>
+<table class="table" id="ViewTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostalCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+  
+</table>
+
+@section Scripts {
+    <script src="~/js/company.js"></script>
+}
